@@ -1,0 +1,8 @@
+# Private configs
+/etc/scroll_weather
+*.pyc
+__pycache__/
+.DS_Store
+
+# Local overrides (if any)
+*.local

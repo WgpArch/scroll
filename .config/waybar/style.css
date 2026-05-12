@@ -1,0 +1,146 @@
+/* ── Global Reset ── */
+* {
+    border: none;
+    font-family: "Z003", "JetBrains Mono", "Noto Sans", sans-serif;
+    font-size: 16px;
+    min-height: 0;
+}
+
+/* ─ Main Bar ── */
+window#waybar {
+    background: #000000;
+    color: #C0C5CE; /* Silver/Chrome text */
+    border: 1px solid #8A95A5; /* Chrome outer border */
+    border-radius: 4px;
+}
+
+/* ── Workspaces ── */
+#workspaces {
+    padding: 0 4px;
+}
+
+#workspaces button {
+    min-width: 34px;
+    padding: 2px 6px;
+    margin: 0 1px;
+    background: transparent;
+    color: #C0C5CE;
+    border: 1px solid #6A7585; /* Subtle chrome border */
+    border-radius: 3px;
+    transition: all 0.15s ease;
+}
+
+#workspaces button:hover {
+    background: rgba(192, 197, 206, 0.15);
+    border-color: #C0C5CE;
+    color: #FFFFFF;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    background: linear-gradient(to bottom, #E8ECF0, #9AA5B5); /* Chrome metallic */
+    border: 1px solid #FFFFFF;
+    color: #0A0E14;
+    font-weight: bold;
+}
+
+#workspaces button.empty {
+    opacity: 0.45;
+    border-color: #4A5565;
+}
+
+/* ── All Modules (Silver Text + Chrome Borders) ── */
+#custom-launcher,
+#sway-mode,
+#sway-window,
+#clock,
+#custom-weather,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#pulseaudio,
+#custom-player,
+#custom-notification,
+#custom-power,
+#tray {
+    padding: 0 8px;
+    margin: 0 2px;
+    color: #C0C5CE;
+    border: 1px solid #8A95A5; /* Chrome module borders */
+    border-radius: 3px;
+}
+
+/* ─ Launcher ── */
+#custom-launcher {
+    font-size: 14px;
+    padding-left: 6px;
+    border-left: 1px solid #8A95A5;
+}
+
+/* ── Mode Indicator ── */
+#sway-mode {
+    color: #A8B2C1;
+    font-weight: 500;
+}
+
+/* ── Window Title ── */
+#sway-window {
+    color: #A8B2C1;
+    font-style: italic;
+}
+
+/* ── Clock ── */
+#clock {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ── Battery States ── */
+#battery.warning {
+    color: #EBCB8B;
+    border-color: #EBCB8B;
+}
+
+#battery.critical {
+    color: #BF616A;
+    border-color: #BF616A;
+}
+
+/* ── Power Button ── */
+#custom-power {
+    padding: 0 10px;
+    font-size: 13px;
+    color: #C0C5CE;
+}
+
+#custom-power:hover {
+    color: #BF616A;
+    border-color: #BF616A;
+}
+
+/* ── Tray ── */
+#tray {
+    padding: 0 6px;
+}
+
+#tray > .passive {
+    opacity: 0.6;
+}
+
+#tray > .needs-attention {
+    opacity: 0.4;
+}
+
+/* ── Tooltip ── */
+tooltip {
+    background: #000000;
+    border: 1px solid #8A95A5;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+tooltip label {
+    color: #C0C5CE;
+    font-size: 11px;
+}

@@ -1,0 +1,185 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 34,
+    "width": 1360,
+    "modules-left": [ "custom/launcher", "sway/workspaces", "sway/mode"],
+    "modules-center": ["clock", "custom/weather"],
+    "modules-right": ["tray", "custom/notification", "temperature", "memory", "cpu", "battery", "pulseaudio", "custom/player", "custom/power"],
+   
+    "sway/mode": {
+        "format": " {}"
+    },
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "disable-markup": false,
+        "format": "{icon}",
+        "persistent-workspaces": {
+        "*": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
+    },
+    "format-icons": {
+        "1": "1 <span font='Font Awesome 5 Free 14'></span>",
+        "2": "2 <span font='Font Awesome 5 Free 14'></span>",
+        "3": "3 <span font='Font Awesome 5 Free 14'></span>",
+        "4": "4 <span font='Font Awesome 5 Free 14'></span>",
+        "5": "5 <span font='Font Awesome 5 Free 14'></span>",
+        "6": "6 <span font='Font Awesome 5 Free 14'></span>",
+        "7": "7 <span font='Font Awesome 5 Free 14'></span>",
+        "8": "8 <span font='Font Awesome 5 Free 14'></span>",
+        "9": "9 <span font='Font Awesome 5 Free 14'></span>",
+        "10": "0 <span font='Font Awesome 5 Free 14'></span>",
+        "11": "11 <span font='Font Awesome 5 Free 14'></span>"
+    }
+    },
+
+    "tray": {
+       "icon-size": 20,
+       "spacing": 8
+    },
+
+    "sway/window": {
+       "max-length": 60,
+       "tooltip": false,
+       "format": "( {} )"
+    },
+
+
+    "custom/launcher": {
+       "format": " ",
+       "on-click": "rofi -show drun -theme ~/.config/waybar2/scripts/modern-dark.rasi",
+       "tooltip": true,
+       "tooltip-format": "btw 😎"
+    },
+
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 300,
+        "exec": "~/.config/waybar/scripts/weather.py",
+        "return-type": "json"
+    },
+
+    "clock": {
+        "interval": 1,
+        "tooltip-format": "<big>{:%b %d}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%b %d %H:%M:%S %p}",
+        "format-alt": "{:%Y-%m-%d}",
+        "calendar": {
+        "mode": "month",
+        "mode-mon-col": 3,
+        "week-pos": "right",
+        "on-scroll": 1,
+        "format": {
+        "months":     "<span><b>{}</b></span>",
+        "days":       "<span><b>{}</b></span>",
+        "weeks":      "<span><b>W{}</b></span>",
+        "weekdays":   "<span><b>{}</b></span>",
+        "today":      "<span><b><u>{}</u></b></span>"
+            }
+        },
+        "actions":  {
+        "on-click-right": "mode",
+        "on-scroll-up": "tz_up",
+        "on-scroll-down": "tz_down",
+        "on-scroll-up": "shift_up",
+        "on-scroll-down": "shift_down"
+        }
+    },
+
+
+
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": true,
+        "on-click": "xfce4-terminal btop &"
+    },
+    "memory": {
+        "format": "  {}%",
+	"tooltip": true,
+	"on-click": "xfce4-terminal btop &"
+    },
+    "temperature": {
+        "interval": 10,
+        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input",
+        "critical-threshold": 100,
+        "format-critical": " {temperatureC}",
+        "format": " {temperatureC}°C"
+    },
+
+    "battery": {
+        "states": {
+	"good": 95,
+        "warning": 30,
+        "critical": 20
+        },
+        "on-click-middle": "xfce-terminal acpi -i",
+        "format": "{icon}  {capacity}%",
+        "format-full": "{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{time}  {icon}",
+        "format-icons": ["", "", "", "", ""]        
+    },
+    
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon} ",
+        "format-icons": {
+        "notification": "<span foreground='red'><sup><small></small></sup></span>",
+        "none": "",
+        "dnd-notification": "<span foreground='red'><sup><small></small></sup></span>",
+        "dnd-none": "",
+        "inhibited-notification": "<span foreground='red'><sup><small></small></sup></span>",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "<span foreground='red'><sup><small></small></sup></span>",
+        "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+      },
+
+      "pulseaudio": {
+        "reverse-scrolling": 1,
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "{icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": [" ", "   "]
+        },
+        "on-click": "pavucontrol",
+        "min-length": 13
+    },
+
+    "custom/player": {
+       "format": "🎵 {}",
+       "exec": "~/.config/waybar/scripts/player.sh",
+       "interval": 3,
+       "max-length": 25,
+       "tooltip": true,
+       "return-type": "text"
+    },
+
+    "custom/power": {
+       "tooltip": false,
+       "on-click": "~/.config/waybar2/scripts/powermenu.sh",
+       "on-click-right": "killall rofi",
+       "format": "⏻ "
+
+    }
+}
+
