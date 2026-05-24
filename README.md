@@ -36,3 +36,5 @@ Personal Scroll compositor configuration with Waybar (bottom bar) and powermenu 
 └── README.md
 
 
+
+## 📸 Screenshots
