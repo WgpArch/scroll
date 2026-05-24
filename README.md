@@ -5,7 +5,7 @@ Personal Scroll compositor configuration with Waybar (bottom bar) and powermenu 
 ## 📁 Structure
 
 ~/.dotfiles/scroll/
-├── .config/
+├── configs/
 │   ├── scroll/
 │   │   ├── config          # Main Scroll config
 │   │   └── config.d/       # Additional config snippets
