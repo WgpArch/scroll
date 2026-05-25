@@ -19,6 +19,7 @@
 Personal Scroll compositor configuration with Waybar (bottom bar) and powermenu scripts.
 
 ## 📁 Structure
+```text
 
 ~/.dotfiles/scroll/
 ├── configs/
@@ -34,6 +35,7 @@ Personal Scroll compositor configuration with Waybar (bottom bar) and powermenu 
 │           └── powermenu.sh      # Shutdown/reboot script
 ├── .gitignore
 └── README.md
+```
 
 
 
