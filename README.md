@@ -38,3 +38,10 @@ Personal Scroll compositor configuration with Waybar (bottom bar) and powermenu 
 
 
 ## 📸 Screenshots
+
+![Screenshot 1](screenshot_2026-05-24_19-22-59.png)
+![Screenshot 2](screenshot_2026-05-24_19-23-28.png)
+![Screenshot 3](screenshot_2026-05-24_19-23-38.png)
+![Screenshot 4](screenshot_2026-05-24_19-23-45.png)
+![Screenshot 5](screenshot_2026-05-24_19-23-53.png)
+![Screenshot 6](screenshot_2026-05-24_22-07-03.png)
