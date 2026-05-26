@@ -1,43 +1,31 @@
+# Scroll Dotfiles
+
 <div align="center">
 
-  <img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" alt="Arch Linux">
-  <img src="https://img.shields.io/badge/Wayland-00B4F0?style=for-the-badge&logo=wayland&logoColor=white" alt="Wayland">
-  <img src="https://img.shields.io/badge/Scroll-4CAF50?style=for-the-badge&logo=window-manager&logoColor=white" alt="Scroll">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License">
+[![View Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](https://wgparch.codeberg.page/scroll/)
 
-  <br><br>
+<img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" alt="Arch Linux">
+<img src="https://img.shields.io/badge/Wayland-00B4F0?style=for-the-badge&logo=wayland&logoColor=white" alt="Wayland">
+<img src="https://img.shields.io/badge/Scroll-4CAF50?style=for-the-badge&logo=window-manager&logoColor=white" alt="Scroll">
+<img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License">
 
-  Simple Stacking Wayland Compositor on Arch Linux.
+<br><br>
+
+Simple Stacking Wayland Compositor on Arch Linux.
 
 </div>
 
 ---
 
+## ✨ Features
+- **Advanced Layout Modes:** Deep integration with Scroll's modal system (Jump, Filter, Fit Size, Align).
+- **Custom Waybar Dock:** A floating bottom bar with persistent icon-based workspaces.
+- **Workspace Scaling:** Beautiful workspace overview bound to `Mod+Tab`.
+- **Smooth Animations:** Custom bezier curves for window moves, opens, and resizes.
 
-# Scroll Config for Arch Linux
+## 📖 Documentation & Installation
 
-Personal Scroll compositor configuration with Waybar (bottom bar) and powermenu scripts.
-
-## 📁 Structure
-```text
-
-~/.dotfiles/scroll/
-├── configs/
-│   ├── scroll/
-│   │   ├── config          # Main Scroll config
-│   │   └── config.d/       # Additional config snippets
-│   └── waybar/
-│       ├── config.jsonc    # Waybar layout & modules
-│       ├── style.css       # Waybar theme
-│       └── scripts/
-│           ├── modern-dark.rasi  # Rofi theme for powermenu
-│           ├── power.rasi        # Powermenu styling
-│           └── powermenu.sh      # Shutdown/reboot script
-├── .gitignore
-└── README.md
-```
-
-
+For full instructions, keybinds, and layout modes, please visit the **[Official Documentation Website](https://wgparch.codeberg.page/scroll/)**.
 
 ## 📸 Screenshots
 
